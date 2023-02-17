@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flipkart</title>
+    <style>
+        *{
+    margin: 0;
+}
+body{
+    position: relative;
+}
+.container{
+    background-color: #eee;
+    height: 200vh;
+    width: 100vw;
+    padding-top: 50px;
+}
+.navbar{
+    z-index: 100;
+    position: fixed;
+    width: 100vw;
+    height: 8vh;
+    background-color: #4072ac;
+    display: flex;
+    justify-content:left;
+    align-items: center;
+    padding-left: 10%;
+    
+    color: #eee;
+}
+#search-box{
+    height: 30px;
+    width: 400px;
+}
+.nav-item{
+    margin-left: 20px;
+    margin-right: 30px;
+    font-size: large;
+}
+.logo{
+   font-size: 30px;
+   font-style: italic;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items:flex-end;
+}
+.flipkart-logo{
+    font-size:small;
+}
+a{
+    text-decoration: none;
+    color: yellow;
+}
+.login{
+    background-color: rgb(255, 255, 255);
+    color: #4072ac;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+.container1{
+    
+    display: flex;
+    height: 20vh;
+    width:100vw;
+    background-color: white;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.container1-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: small;
+}
+.container1-item-image{
+    height: 80px;
+}
+
+.nav-item:hover{
+    transform: scale(1.02);
+    cursor: pointer;
+}
+/* carousel */
+
+  
+.container2{
+   
+    margin-top: 10px;
+    background-color: rgb(255, 255, 255);
+    height: 35vh;
+    width: 100wh;
+}   
+
+#imgs img {
+    width: 100vw;
+    height: 40vh;
+    object-fit:fill;
+  }
+  
+  .carousel {
+    
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    height: 90vw;
+   
+   
+  }
+  
+  .image-container {
+    display: flex;
+    transform: translateX(0);
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .buttons-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .btn {
+    background-color: rebeccapurple;
+    color: #fff;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    width: 5.5%;
+    height: 70px;
+  }
+  
+  .btn:hover {
+    opacity: 0.9;
+  }
+  
+  .btn:focus {
+    outline: none;
+  }
+
+  .carousel{
+    position: relative;
+  }
+  .image-container{
+    position: absolute;
+  }
+  .buttons-container{
+    position: absolute;
+  }
+  #left{
+    position:absolute;
+    left: 0;
+    top: 100px;
+  }
+  #right{
+    position:absolute;
+    left: 95vw;
+    top: 100px;
+  }
+  .container3{
+    position: relative;
+    margin-top:45px;
+    background-color: #4072ac;
+    height: 45vh;
+    width: 100vw;
+  }
+  .container4{
+    position: relative;
+    margin-top:45px;
+    background-color: #4072ac;
+    height: 45vh;
+    width: 100vw;
+  }
+  .left-side-content{
+    position: absolute;
+    background-color: white;
+    left: 0;
+    height: 45vh;
+    width: 20vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size:xx-large;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+  .right-side-content{
+    position: absolute;
+    background-color: white;
+    right: 0;
+    height: 45vh;
+    width: 80vw;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size:small;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+  .right-side-content-element{
+    display: flex;
+    flex-direction: column;
+    justify-content: center ;
+    align-items:center;
+  }
+  .right-side-content-element img{
+    margin-bottom: 20px;
+  }
+  .right-side-content-element img:hover{
+    transform: scale(1.2);
+    cursor: pointer;
+  }
+  input:focus{
+    outline: 0;
+  }
+    </style>
+</head>
+
+<body>
+    <div class="mainContainer">
+        <div class="navbar">
+            <div class="nav-item logo">Flipkart<div class="flipkart-logo">Explore <span class=flipkart-pluse><a
+                            href="#">Plus</a></span></div>
+            </div>
+            <div class="nav-item"><input type="text" name="search-box" id="search-box" placeholder="search for products, brand and more"></div>
+            <div class="nav-item login">Login</div>
+            <div class="nav-item">Become a Seller</div>
+            <div class="nav-item">More</div>
+            <div class="nav-item">Cart</div>
+        </div>
+        <div class="container">
+            <div class="container1">
+                <div class="container1-item"> <img
+                        src="https://rukminim1.flixcart.com/flap/128/128/image/29327f40e9c4d26b.png?q=100" alt=""
+                        class="container1-item-image">Grocery</div>
+                <div class="container1-item"><img
+                        src="https://rukminim1.flixcart.com/flap/128/128/image/22fddf3c7da4c4f4.png?q=100" alt=""
+                        class="container1-item-image">Mobiles</div>
+                <div class="container1-item"><img
+                        src="https://rukminim1.flixcart.com/flap/128/128/image/c12afc017e6f24cb.png?q=100" alt=""
+                        class="container1-item-image">Fashion</div>
+                <div class="container1-item"><img
+                        src="https://rukminim1.flixcart.com/flap/128/128/image/69c6589653afdb9a.png?q=100" alt=""
+                        class="container1-item-image">Electronics</div>
+                <div class="container1-item"><img
+                        src="https://rukminim1.flixcart.com/flap/128/128/image/ab7e2b022a4587dd.jpg?q=100" alt=""
+                        class="container1-item-image">Home</div>
+                <div class="container1-item"><img
+                        src="https://rukminim1.flixcart.com/flap/128/128/image/0ff199d1bd27eb98.png?q=100" alt=""
+                        class="container1-item-image">Appliances</div>
+                <div class="container1-item"><img
+                        src="https://rukminim1.flixcart.com/flap/128/128/image/71050627a56b4693.png?q=100" alt=""
+                        class="container1-item-image">Travel</div>
+                <div class="container1-item"><img
+                        src="https://rukminim1.flixcart.com/flap/128/128/image/f15c02bfeb02d15d.png?q=100" alt=""
+                        class="container1-item-image">Top Offers</div>
+                <div class="container1-item"><img
+                        src="https://rukminim1.flixcart.com/flap/128/128/image/dff3f7adcf3a90c6.png?q=100" alt=""
+                        class="container1-item-image">Beauty,Toy & More</div>
+                <div class="container1-item"><img
+                        src="https://rukminim1.flixcart.com/fk-p-flap/128/128/image/05d708653beff580.png?q=100" alt=""
+                        class="container1-item-image">Two wheelers</div>
+            </div>
+            <div class="container2">
+                <div class="carousel">
+                    <div class="image-container" id="imgs">
+                        <img
+                        src="https://d8it4huxumps7.cloudfront.net/uploads/images/610e35fc79738_4.jpg?d=1366x396"
+                        alt="fourth-image"
+                        />
+                        <img
+                        src="https://d8it4huxumps7.cloudfront.net/uploads/images/6298bd90cd0f7_flipkart-grid-40-information-security-challenge.png?d=1366x396"
+                        alt="fourth-image"
+                        />
+                        <img
+                        src="https://d8it4huxumps7.cloudfront.net/uploads/images/610e35fc286b9_1__1_.jpg?d=1366x396"
+                        alt="fourth-image"
+                        />
+                    </div>
+              
+                    <div class="buttons-container">
+                      <button id="left" class="btn">Prev</button>
+                      <button id="right" class="btn">Next</button>
+                    </div>
+                </div>
+
+            </div>
+            <div class="container3">
+                <div class="left-side-content">Best of <div>Electronics</div></div>
+                <div class="right-side-content">
+                    <div class="right-side-content-element"><img src="https://rukminim1.flixcart.com/image/200/200/klcmoi80/monitor/o/c/t/vg27aq-tuf-gaming-vg27aq-asus-original-imagyh3f2y99qrrg.jpeg?q=70" alt="">Monitors</div>
+                    <div class="right-side-content-element"><img src="https://rukminim1.flixcart.com/image/200/200/kuczmvk0/cases-covers/back-cover/w/w/t/m-12954-colorcase-original-imag7g7knnn66wdh.jpeg?q=70" alt="">Plain Case & Covers</div>
+                    <div class="right-side-content-element"><img src="https://rukminim1.flixcart.com/image/200/200/kfmv9u80/monitor/9/n/v/ha220q-um-ww0si-a01-acer-original-imafwfjq3gzgjvz5.jpeg?q=70" alt="">Monitors</div>
+                    <div class="right-side-content-element"><img src="https://rukminim1.flixcart.com/image/200/200/kfmv9u80/monitor/9/n/v/ha220q-um-ww0si-a01-acer-original-imafwfjq3gzgjvz5.jpeg?q=70" alt="">Plain Cases & Covers</div>
+                    <div class="right-side-content-element"><img src="https://rukminim1.flixcart.com/image/200/200/l0sgyvk0/cases-covers/back-cover/c/b/s/zapsa03tpu01691-zapcase-original-imagcgffegrnhh6x.jpeg?q=70" alt="">Designer Cases & Covers</div>
+                </div>
+            </div>
+            <div class="container4">
+                <div class="left-side-content">Beauty, Food <div>Toys & more</div></div>
+                <div class="right-side-content">
+                    <div class="right-side-content-element"><img src="https://rukminim1.flixcart.com/image/200/200/l3uhvgw0/cycle/n/z/c/torro-26t-26-16-montra-72-21-gear-original-imagevzncygdd8ah.jpeg?q=70" alt="">Monitors</div>
+                    <div class="right-side-content-element"><img src="https://rukminim1.flixcart.com/image/200/200/jlph9jk0/cycle/h/f/k/skyper-26t-sskp26bk0001-16-hero-original-imaf8ru5xysfgtmx.jpeg?q=70" alt="">Plain Case & Covers</div>
+                    <div class="right-side-content-element"><img src="https://rukminim1.flixcart.com/image/200/200/l4d2ljk0/bat/3/4/4/1000-hitman-full-size-double-blade-poplar-cricket-bat-advance-original-imagf9zzgxxfamce.jpeg?q=70" alt="">Monitors</div>
+                    <div class="right-side-content-element"><img src="https://rukminim1.flixcart.com/image/200/200/k3j1z0w0/kit/d/v/e/combo-of-ab-wheel-rollerand-tummy-trimmer-exercisee1s-charuvi-original-imafdwh9nyzyujvk.jpeg?q=70" alt="">Plain Cases & Covers</div>
+                    <div class="right-side-content-element"><img src="https://rukminim1.flixcart.com/image/200/200/k0plpjk0/remote-control-toy/9/g/k/4-function-remote-control-high-speed-big-racing-car-toy-funkey-original-imafkg33umd8dy93.jpeg?q=70" alt="">Designer Cases & Covers</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script >const imgs = document.getElementById('imgs')
+        const leftBtn = document.getElementById('left')
+        const rightBtn = document.getElementById('right')
+        
+        const img = document.querySelectorAll('#imgs img')
+        
+        let idx = 0
+        
+        let interval = setInterval(run, 2000)
+        
+        function run() {
+            idx++
+            changeImage()
+        }
+        
+        
+        function changeImage() {
+            if(idx > img.length - 1) {
+                idx = 0
+            } else if(idx < 0) {
+                idx = img.length - 1
+            }
+        
+            imgs.style.transform = `translateX(${-idx * 100}vw)`
+        }
+        
+        function resetInterval() {
+            clearInterval(interval)
+            interval = setInterval(run, 2000)
+        }
+        
+        rightBtn.addEventListener('click', () => {
+            idx++
+            changeImage()
+            resetInterval()
+        })
+        
+        leftBtn.addEventListener('click', () => {
+            idx--
+            changeImage()
+            resetInterval()
+        })
+        </script>
+</body>
+
+</html>
